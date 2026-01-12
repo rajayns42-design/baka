@@ -134,8 +134,7 @@ if __name__ == '__main__':
         app_bot.add_handler(CommandHandler("marry", social.marry_status))
         app_bot.add_handler(CommandHandler("divorce", social.divorce))
         app_bot.add_handler(CommandHandler("couple", social.couple_game))
-        app_bot.add_handler(CallbackQueryHandler(social.proposal_callback, pattern="^marry_"))
-        app_bot.add_handler(CallbackQueryHandler(social.couples_callback, pattern="^marry_"))
+        app_bot.add_handler(CallbackQueryHandler(social.proposal_callback, pattern="^marry_"))  
         
         
         app_bot.add_handler(CommandHandler("wpropose", waifu.wpropose))
