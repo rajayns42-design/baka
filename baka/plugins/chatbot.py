@@ -31,7 +31,7 @@ from baka.database import chatbot_collection
 from baka.utils import stylize_text  # Import back for output only
 
 # --- 🎨 BAKA PERSONALITY CONFIG ---
-BAKA_NAME = "Baka"
+BAKA_NAME = "Angel"  
 
 # Rotating emoji pools (fresh every response)
 EMOJI_POOL = ["✨", "💖", "🌸", "😊", "🥰", "💕", "🎀", "🌺", "💫", "🦋", "🌼", "💗", "🎨", "🍓", "☺️", "😌", "🌟", "💝"]
@@ -79,6 +79,11 @@ STICKER_PACKS = [
 ]
 
 FALLBACK_RESPONSES = [
+    
+    "mai bhi tum payr krti ❤️",
+    "Love u to 😚",
+    "Kaise baby",
+    "hy baby 😘",
     "Achha ji? 😊",
     "Hmm... aur batao?",
     "Okk okk! ✨",
@@ -86,8 +91,8 @@ FALLBACK_RESPONSES = [
     "Toh phir?",
     "Interesting! 🌸",
     "Aur kya chal raha?",
-    "Sunao sunao! 💕",
-    "Haan haan",
+    "Sunao! 💕",
+    "Haan",
     "Theek hai 🥰"
 ]
 
