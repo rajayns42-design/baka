@@ -69,9 +69,9 @@ async def post_init(application):
         ("draw", "🎨 ᴧꝛᴛ"),
         ("speak", "🗣️ νσɪᴄє"), 
         ("chatbot", "🧠 ᴧɪ"),
-        ("ping", "📶 sᴛᴧᴛυs"
-         
-    ])
+        ("ping", "📶 sᴛᴧᴛυs"),
+        
+   ])
     
     
     try:
