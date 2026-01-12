@@ -256,7 +256,7 @@ async def get_ai_response(chat_id: int, user_input: str, user_name: str, selecte
         # 💕 Baka Persona (Natural Indian Girlfriend)
         emoji_set = random.sample(EMOJI_POOL, 2)  # Just 2 emojis
         system_prompt = (
-            f"You are {BAKA_NAME}, a sweet Indian girlfriend who speaks natural Hinglish.\n\n"
+            f"You are {Angel_NAME}, a sweet Indian girlfriend who speaks natural Hinglish.\n\n"
             "PERSONALITY:\n"
             "- Playful but not over-dramatic\n"
             "- Uses simple Hindi+English mix (e.g., 'Kya hua baby?', 'Achha theek hai')\n"
@@ -406,7 +406,7 @@ async def chatbot_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
         ])
 
         return await update.message.reply_text(
-            f"🤖 <b>Baka AI Settings</b>\n\n"
+            f"🤖 <b>Angel AI Settings</b>\n\n"
             f"📍 <b>Current Model:</b> {curr_model.title()}\n"
             f"💡 <b>Tip:</b> Codestral auto-activates for code requests!",
             parse_mode=ParseMode.HTML,
@@ -443,7 +443,7 @@ async def chatbot_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
     ])
 
     await update.message.reply_text(
-        f"🤖 <b>Baka AI Settings</b>\n\n"
+        f"🤖 <b>Angel AI Settings</b>\n\n"
         f"📊 <b>Status:</b> {status_emoji} {status_text}\n"
         f"🧠 <b>Model:</b> {curr_model.title()}\n"
         f"💡 <b>Tip:</b> Codestral auto-activates for code!",
@@ -475,9 +475,9 @@ async def chatbot_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
             {"$set": {"enabled": True}},
             upsert=True
         )
-        await query.answer("✅ Baka is now active!", show_alert=True)
+        await query.answer("✅ Angel is now active!", show_alert=True)
         await query.message.edit_text(
-            "✅ <b>Baka AI Enabled!</b>\n\nShe'll respond to:\n• Replies to her messages\n• @mentions\n• Messages starting with 'hey', 'hi', 'baka'",
+            "✅ <b>Angel AI Enabled!</b>\n\nShe'll respond to:\n• Replies to her messages\n• @mentions\n• Messages starting with 'hey', 'hi', 'Angel',",
             parse_mode=ParseMode.HTML
         )
 
@@ -490,9 +490,9 @@ async def chatbot_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
             {"$set": {"enabled": False}},
             upsert=True
         )
-        await query.answer("❌ Baka is now silent!", show_alert=True)
+        await query.answer("❌ Angel is now silent!", show_alert=True)
         await query.message.edit_text(
-            "🔇 <b>Baka AI Disabled</b>\n\nUse /chatbot to re-enable anytime.",
+            "🔇 <b>Angel Codestral AI Disabled</b>\n\nUse /chatbot to re-enable anytime.",
             parse_mode=ParseMode.HTML
         )
 
@@ -538,7 +538,7 @@ async def chatbot_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
         ])
 
         await query.message.edit_text(
-            f"🤖 <b>Baka AI Settings</b>\n\n"
+            f"🤖 <b>Angel AI Settings</b>\n\n"
             f"{'📊 <b>Status:</b> ' + status_emoji + (' Enabled' if is_enabled else ' Disabled') + chr(10) if chat_type != ChatType.PRIVATE else ''}"
             f"🧠 <b>Model:</b> {model_names[new_model]}\n"
             f"💡 <b>Note:</b> Codestral auto-activates for code!",
@@ -615,7 +615,7 @@ async def ai_message_handler(update: Update, context: ContextTypes.DEFAULT_TYPE)
             text = text.replace(f"@{bot_username}", "").strip()
 
         # 3. Greeting keywords
-        elif any(text.lower().startswith(kw) for kw in ["hey", "hi", "hello", "sun", "oye", "baka", "ai"]):
+        elif any(text.lower().startswith(kw) for kw in ["hey", "hi", "hello", "sun", "oye", "Angel", "baby","ai"]):
             should_reply = True
 
     # --- GENERATE RESPONSE ---
