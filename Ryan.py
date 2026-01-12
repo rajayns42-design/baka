@@ -70,7 +70,11 @@ async def post_init(application):
         ("speak", "🗣️ νσɪᴄє"), 
         ("chatbot", "🧠 ᴧɪ"),
         ("ping", "📶 sᴛᴧᴛυs")
+        ("premium", "🌟 ʏᴏᴜʀ ᴩʀᴇᴍɪᴜᴍ ᴀᴄᴛɪᴠᴇᴛ ɴᴏᴡ ꜰᴏʀ ᴀɴɢᴇʟ"),
+        ("couples", "ᴄʜᴏᴏꜱʜ ʀᴀɴᴅᴏᴍ ᴄᴏᴜᴩʟᴇꜱ"),
+         
     ])
+    
     
     try:
         bot_info = await application.bot.get_me()
@@ -120,7 +124,8 @@ if __name__ == '__main__':
         app_bot.add_handler(CommandHandler("shop", shop.shop_menu))
         app_bot.add_handler(CommandHandler("buy", shop.buy))
         app_bot.add_handler(CallbackQueryHandler(shop.shop_callback, pattern="^shop_"))
-        
+        app_bot.add_handler(CommandHandler("premium", premium.premium_menu))
+       
         # RPG / Game
         app_bot.add_handler(CommandHandler("kill", game.kill))
         app_bot.add_handler(CommandHandler("rob", game.rob))
@@ -133,6 +138,8 @@ if __name__ == '__main__':
         app_bot.add_handler(CommandHandler("divorce", social.divorce))
         app_bot.add_handler(CommandHandler("couple", social.couple_game))
         app_bot.add_handler(CallbackQueryHandler(social.proposal_callback, pattern="^marry_"))
+        app_bot.add_handler(CallbackQueryHandler(social.couples_callback, pattern="^marry_"))
+        
         
         app_bot.add_handler(CommandHandler("wpropose", waifu.wpropose))
         app_bot.add_handler(CommandHandler("wmarry", waifu.wmarry))
@@ -179,5 +186,5 @@ if __name__ == '__main__':
         # 5. Group Tracking (FIXED: Uses Async function from events.py)
         app_bot.add_handler(MessageHandler(filters.ChatType.GROUPS, events.group_tracker), group=5)
 
-        print("ꝛʏᴧηʙᴧᴋᴧ ʙσᴛ ꜱᴛᴀʀᴛɪɴɢ ᴩᴏʟʟɪɴɢ...")
+        print("ᴀɴɢᴇʟ ʙσᴛ ꜱᴛᴀʀᴛɪɴɢ ᴩᴏʟʟɪɴɢ...")
         app_bot.run_polling(allowed_updates=Update.ALL_TYPES, drop_pending_updates=True)
