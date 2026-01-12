@@ -79,13 +79,13 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         
         # --- THE ULTRA AESTHETIC CAPTION ---
         caption = (
-            f"👋 {stylize_text('Konichiwa')} {user_link}! (⁠≧⁠▽⁠≦⁠)\n"
-            f"The {stylize_text('Aesthetic AI-Powered RPG Bot')}! 💞\n\n"
-            f"⊚  {stylize_text('Features')}:\n"
-            f"⊚  {stylize_text('RPG')}: {stylize_text('Kill, Rob (100%), Protect')}\n"
-            f"⊚  {stylize_text('Social')}: {stylize_text('Marry, Couple, Waifu')}\n"
-            f"➻  {stylize_text('Economy')}: {stylize_text('Claim, Give, Shop')}\n"
-            f"➻  {stylize_text('AI')}: {stylize_text('Sassy Chatbot & Art')}\n\n"
+            f"👋 {stylize_text('ᴋσиιᴄнɪᴡᴀ')} {user_link}! 🥀\n"
+            f"The {stylize_text('ᴀᴇꜱᴛʜᴇᴛɪᴄ ᴀɪ-ᴩᴏᴡᴇʀᴇᴅ ʀᴩɢ ʙσт')}! 💞\n\n"
+            f"⊚  {stylize_text('ꜰᴇᴀᴛᴜʀᴇꜱ')}:\n"
+            f"⊚  {stylize_text('ʀᴩɢ')}: {stylize_text('ᴋɪʟʟ, ʀᴏʙ (100%), ᴩʀᴏᴛᴇᴄᴛ')}\n"
+            f"⊚  {stylize_text('ꜱᴏᴄɪᴄᴀʟ')}: {stylize_text('ᴍᴀɪʀʀʏ, ᴄᴏᴜᴩʟᴇ, ᴡᴀɪꜰᴜ')}\n"
+            f"➻  {stylize_text('ᴇᴄᴏɴᴏᴍʏ')}: {stylize_text('ᴄʟᴀɪᴍ, ɢɪᴠᴇ, ꜱʜᴏᴩ')}\n"
+            f"➻  {stylize_text('ᴀɪ')}: {stylize_text('Sassy ᴄʜᴀᴛʙᴏᴛ & ᴀʀᴛ')}\n\n"
             f"✦ {stylize_text('Need Help?')}\n"
             f"{stylize_text('Click the buttons below!')}"
         )
