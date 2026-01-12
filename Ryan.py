@@ -69,9 +69,7 @@ async def post_init(application):
         ("draw", "🎨 ᴧꝛᴛ"),
         ("speak", "🗣️ νσɪᴄє"), 
         ("chatbot", "🧠 ᴧɪ"),
-        ("ping", "📶 sᴛᴧᴛυs")
-        ("premium", "🌟 ʏᴏᴜʀ ᴩʀᴇᴍɪᴜᴍ ᴀᴄᴛɪᴠᴇᴛ ɴᴏᴡ ꜰᴏʀ ᴀɴɢᴇʟ"),
-        ("couples", "ᴄʜᴏᴏꜱʜ ʀᴀɴᴅᴏᴍ ᴄᴏᴜᴩʟᴇꜱ"),
+        ("ping", "📶 sᴛᴧᴛυs"
          
     ])
     
@@ -124,8 +122,7 @@ if __name__ == '__main__':
         app_bot.add_handler(CommandHandler("shop", shop.shop_menu))
         app_bot.add_handler(CommandHandler("buy", shop.buy))
         app_bot.add_handler(CallbackQueryHandler(shop.shop_callback, pattern="^shop_"))
-        app_bot.add_handler(CommandHandler("premium", premium.premium_menu))
-       
+        
         # RPG / Game
         app_bot.add_handler(CommandHandler("kill", game.kill))
         app_bot.add_handler(CommandHandler("rob", game.rob))
